@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js</title>
+</head>
+<body>
+    <div id="app">
+        {{message}}
+        <ul>
+            <li v-for="todo in todos">
+                {{todo.name}}
+            </li>
+        </ul>
+    </div>
+</body>
+<script src="vuejs-1.0.12/vue.js"></script>
+<script src="vuejs-1.0.12/vue-resource.js"></script>
+<script>
+window.onload = function () {
+    new Vue({
+        el: "#app",
+        data: {
+            message: null,
+            todos: null,
+        },
+        ready: function(){
+            this.$http({url: 'http://vuejs.com/json.php', method: 'get'}).then(function(response){
+                this.message = response.data[0].name;
+                this.todos = response.data;
+            });
+        }
+    });
+}
+</script>
+</html>
