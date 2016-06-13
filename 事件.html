@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue.js</title>
+</head>
+<body>
+	<div id="app">
+        {{message}}
+		<button v-on:click="show">click</button>
+	</div>
+</body>
+<script src="vuejs-1.0.12/vue.js"></script>
+<script>
+window.onload = function () {
+	new Vue({
+		el : "#app",
+        data: {
+            message: 'Hello, vuejs'
+        },
+		methods: {
+			show: function(){
+                this.message = 'test click';
+			}
+		}
+	});
+}
+</script>
+</html>
