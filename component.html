@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js</title>
+</head>
+<body>
+    <div id="app">
+        <my-component></my-component>
+    </div>
+</body>
+<script src="vuejs-1.0.12/vue.js"></script>
+<script>
+window.onload = function () {
+    //创建组件构造器
+    var MyComponent = Vue.extend({
+        template: '<div>自定义组件</div>'
+    });
+    //注册为组件
+    Vue.component('my-component', MyComponent);
+    //实例化
+    new Vue({
+        el: "#app"
+    });
+}
+</script>
+</html>
