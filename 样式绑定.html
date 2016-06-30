@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js</title>
+    <style type="text/css">
+        [v-cloak]{ display: none }
+        .classA{color:red;}
+        .classB{font-size:20px;}
+    </style>
+</head>
+<body>
+    <div id="app" v-cloak>
+        <p v-bind:class="classObject">你好</p>
+        <p v-bind:style="styleObject">vue.js</p>
+    </div>
+</body>
+<script src="vuejs-1.0.26/vue.js"></script>
+<script>
+window.onload = function () {
+    new Vue({
+        el: "#app",
+        data: {
+            classObject: {
+                'classA': true,
+                'classB': true
+            },
+            styleObject: {
+                'color': 'red',
+                'fontSize': '20px'
+            }
+        }
+    });
+}
+</script>
+</html>
