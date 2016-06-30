@@ -10,7 +10,7 @@
 <body>
 	<div id="app" v-cloak>
 		<ul>
-			<li v-for="todo in todos">
+			<li v-for="todo in todos" v-if="todo.age > 20 && todo.age < 25">
 				{{todo.name}}, 今天吃了吗？
 			</li>
 		</ul>
@@ -23,8 +23,8 @@ window.onload = function () {
 		el : "#app",
 		data: {
 			todos : [
-				{name : '小华'},
-				{name : '小黑'}
+				{name : '小华', age: 28},
+				{name : '小黑', age: 22}
 			]
 		}
 	});
