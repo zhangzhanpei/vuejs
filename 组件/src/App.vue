@@ -1,20 +1,12 @@
 <template>
-<div class="message">{{ msg }}</div>
-<div class="hehe">{{ hehe }}</div>
+<Navbar></Navbar>
 </template>
 
 <script>
+import Navbar from './components/Navbar.vue';
 export default {
-    data () {
-        return {
-            msg: 'Hello from vue-loader!',
-            hehe: 'hehe'
-        }
+    components: {
+        Navbar
     }
 }
 </script>
-
-<style>
-.message { color: blue;}
-.hehe{ color: gray; }
-</style>
