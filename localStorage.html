@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js</title>
+</head>
+<body>
+    <div>
+        localStorage 和 sessionStorage 使用
+    </div>
+</body>
+<script>
+if (window.localStorage) {
+    let storage = window.localStorage;
+    storage.foo = ["foo", "bar"]; //保存键值
+    storage.removeItem("foo"); //删除键
+}
+if (window.sessionStorage) {
+    let storage = window.sessionStorage;
+    storage.bar = "bar"; //保存键值
+    storage.removeItem("bar"); //删除键
+    storage.clear(); //清空所有键
+}
+</script>
+</html>
