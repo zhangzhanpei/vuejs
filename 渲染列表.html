@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Vue.js</title>
-	<style type="text/css">
-	[v-cloak]{ display: none }
-	</style>
+    <meta charset="UTF-8">
+    <title>Vue.js</title>
+    <style type="text/css">
+    [v-cloak]{ display: none }
+    </style>
 </head>
 <body>
-	<div id="app" v-cloak>
-		<ul>
-			<li v-for="todo in todos" v-if="todo.age > 20 && todo.age < 25">
-				{{todo.name}}, 今天吃了吗？
-			</li>
-		</ul>
-	</div>
+    <div id="app" v-cloak>
+        <ul>
+            <li v-for="(user, index) in users">
+                用户-{{index}}：{{user.name}}, 年龄{{user.age}}
+            </li>
+        </ul>
+    </div>
 </body>
-<script src="vuejs-1.0.12/vue.js"></script>
+<script src="vuejs-2.0.1/vue.js"></script>
 <script>
 window.onload = function () {
-	new Vue({
-		el : "#app",
-		data: {
-			todos : [
-				{name : '小华', age: 28},
-				{name : '小黑', age: 22}
-			]
-		}
-	});
+    new Vue({
+        el : "#app",
+        data: {
+            users : [
+                {name : '小华', age: 28},
+                {name : '小黑', age: 22}
+            ]
+        }
+    });
 }
 </script>
 </html>
