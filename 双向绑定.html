@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Vue.js</title>
+    <meta charset="UTF-8">
+    <title>Vue.js</title>
 </head>
 <body>
-	<div id="app">
-		{{message}}
-		<input type="text" v-model="message">
-	</div>
+    <div id="app">
+        {{message}}
+        <input type="text" v-model="message">
+    </div>
 </body>
-<script src="vuejs-1.0.12/vue.js"></script>
+<script src="vuejs-2.0.1/vue.js"></script>
 <script>
 window.onload = function () {
-	new Vue({
-		el : "#app",
-		data: {
-			message : ''
-		}
-	});
+    new Vue({
+        el : "#app",
+        data: {
+            message : ''
+        },
+        mounted: function () {
+            this.$nextTick(function () {
+                alert('使用mounted钩子替换ready');
+            });
+        }
+    });
 }
 </script>
 </html>
