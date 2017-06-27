@@ -1,5 +1,5 @@
 <template>
-    <nav>
+    <nav style="margin-left: 15px">
         <ul class="pagination">
             <li v-bind:class="{disabled: page === 1}"><a @click.prevent="prevPage">&lt;&lt;</a></li>
             <li v-bind:class="{active: item === page}" v-for="(item, index) in items"><a @click.prevent="gotoPage(item)">{{item}}</a></li>
