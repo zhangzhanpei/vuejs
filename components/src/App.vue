@@ -4,6 +4,7 @@
       <ul class="nav nav-pills">
         <li role="presentation"><router-link to="/">首页</router-link></li>
         <li role="presentation"><router-link to="/posts">文章</router-link></li>
+        <li role="presentation"><router-link to="/transition">过渡</router-link></li>
       </ul>
     </nav>
     <div>
@@ -14,6 +15,7 @@
 
 <script>
 const posts = require("./views/posts.vue");
+const transition = require("./views/transition.vue");
 export default {
   name: 'app',
   components: {
