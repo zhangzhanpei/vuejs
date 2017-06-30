@@ -12,6 +12,7 @@
     "vue": "^2.*"
   },
   "devDependencies": {
+    "axios": "^0.16.*",
     "babel-core": "^6.*",
     "babel-loader": "^6.*",
     "babel-preset-env": "^1.5.1",
